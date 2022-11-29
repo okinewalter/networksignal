@@ -1,0 +1,103 @@
+{% extends 'gsm/base.html' %}
+{% load static %}
+{% block title %}Compus Netowrk System Detection{% endblock %}
+{% block content%}
+<header class="masthead">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center">           
+            <div class="col-lg-6">
+                <!-- Mashead text and app badges-->
+                <div class="mb-5 mb-lg-0 text-center text-lg-start">
+                    <div class="d-flex justify-content-center">
+                        <img src="{% static 'assets/img/logo.png' %}" alt="..." style="width: 150px"/>
+                    </div>
+                    <h1 class="d-flex justify-content-center display-1 lh-1 mb-3">Welcome</h1>
+                    <p class="lead fw-normal text-muted mb-5">Mobile Signal Strenght Tracker is a Mobile Network Signal Strength Information System (MNSSIS). Easily track the best the network to use at which point/location on campus and make informed network choices.</p>                    
+                </div>                
+            </div>
+            <div class="col-lg-6 d-flex justify-content-center">               
+              <img src="{% static 'assets/img/pole.png' %}" />                                
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Quote/testimonial aside-->
+<aside class="text-center bg-gradient-primary-to-secondary">
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-xl-8">
+                <div class="h2 fs-1 text-white mb-4">"This system really worked as expected, it really helped me choose the best network for the 2nd floor- right wing"</div>
+                 <p class="font-weight-bold text-white">John M. Teiko - IT Student</p>
+            </div>
+        </div>
+    </div>
+</aside>
+<!-- App features section-->
+<section id="features">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-8 order-lg-1 mb-5 mb-lg-0">
+                <div class="container-fluid px-5">
+                    <div class="row gx-5">
+                        <div class="col-md-6 mb-5">
+                            <!-- Feature item-->
+                            <div class="text-center">
+                                <i class="bi bi-people-fill icon-feature text-gradient d-block mb-3"></i>
+                                <h3 class="font-alt">User Registration</h3>
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-5">
+                            <!-- Feature item-->
+                            <div class="text-center">
+                                <i class="bi bi-reception-4 icon-feature text-gradient d-block mb-3"></i>
+                                <h3 class="font-alt">Signal Tracking</h3>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-5 mb-md-0">
+                            <!-- Feature item-->
+                            <div class="text-center">
+                                <i class="bi bi-zoom-in icon-feature text-gradient d-block mb-3"></i>
+                                <h3 class="font-alt">Compare signal strengths</h3>
+                              
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <!-- Feature item-->
+                            <div class="text-center">
+                                <i class="bi bi-pencil-fill icon-feature text-gradient d-block mb-3"></i>
+                                <h3 class="font-alt">Input Signal management</h3>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 order-lg-0">
+                <!-- Features section device mockup-->
+                <div class="features-device-mockup">
+                    <img src="{% static 'assets/img/school.jpeg' %}" alt="..." style="width: 500px"  />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer-->
+<footer class="bg-black text-center py-5">
+    <div class="container px-5">
+        <div class="text-white-50 small">
+            <div class="mb-2">&copy; Your Website 2022. All Rights Reserved.</div>
+            <a href="#!">Privacy</a>
+            <span class="mx-1">&middot;</span>
+            <a href="#!">Terms</a>
+            <span class="mx-1">&middot;</span>
+            <a href="#!">FAQ</a>
+        </div>
+    </div>
+</footer>
+{% endblock content%}
+ 

@@ -1,0 +1,26 @@
+{% if data %}
+<div class="card mt-3">                        
+  <div class="card-body">
+    <h5 class="card-title">Search Results</h5>
+    {% for row in data %}
+    {% if row.rating >= 70 %}
+    <div class="progress mb-3">
+      {{ row.network__name}}&nbsp; <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%" aria-valuenow="{{ row.rating }}" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    {% elif row.rating >= 40  %}
+    <div class="progress mb-3">
+      {{ row.network__name}}&nbsp; <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 50%" aria-valuenow="{{ row.rating }}" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    {% else %}
+    <div class="progress mb-3">
+      {{ row.network__name}}&nbsp; <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 10%" aria-valuenow="{{ row.rating }}" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    {% endif %}
+  
+   
+    {% endfor %}
+  </div>
+</div> 
+{% else %}
+<p class="alert alert-info">No data found for Request.</p>
+{% endif %}

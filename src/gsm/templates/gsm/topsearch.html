@@ -1,0 +1,5 @@
+{% if topsearch %}                   
+      {% for row in topsearch %}
+      <p class="card-text">{{ row.location.name}} <span class="badge bg-secondary">{{row.counter}}</span></p>
+      {% endfor %}                 
+{% endif %}

@@ -1,0 +1,76 @@
+{% extends 'gsm/base.html' %}
+{% load static %}
+{% block title %}Compus Netowrk System Detection{% endblock %}
+{% block content%}
+<header class="masthead">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center">           
+            <div class="col-lg-12">
+                <!-- Mashead text and app badges-->
+                <div class="mb-5 mb-lg-0 text-center text-lg-start">
+                    <div class="d-flex justify-content-center">
+                        <img src="{% static 'assets/img/wave.png' %}" alt="..." style="width: 150px"/>
+                    </div>
+                    <h1 class="d-flex justify-content-center display-1 lh-1 mb-3">FAQs</h1>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              How does the system work
+                            </button>
+                          </h2>
+                          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              The system works by periodically collecting data on each of the telecommunication networks signal readings at vantage areas on the AIT KCC campus and then performing average calculations on data collected. The system then make predictions based on the averaging results.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              How accurate is your data
+                            </button>
+                          </h2>
+                          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              The accuracy of the data for the system is dependent on the frequency of data collection. Our team collects the network signal data of each of the telcos three (3) times (begininig – midweek – weekend) every week and feed the system with the data for a more current and reliable prediction to be made?
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              Which Locations do you have data on?
+                            </button>
+                          </h2>
+                          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              We currently have data on the following locations on the KCC Campus: Ground Floor, First Floor, Second Floor, Third Floor, Fourth Floor, Fifth floor and the Sixth Floor.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>                
+            </div>
+             
+        </div>
+    </div>
+</header>
+ 
+ 
+
+<!-- Footer-->
+<footer class="bg-black text-center py-5">
+    <div class="container px-5">
+        <div class="text-white-50 small">
+            <div class="mb-2">&copy; Your Website 2022. All Rights Reserved.</div>
+            <a href="#!">Privacy</a>
+            <span class="mx-1">&middot;</span>
+            <a href="#!">Terms</a>
+            <span class="mx-1">&middot;</span>
+            <a href="#!">FAQ</a>
+        </div>
+    </div>
+</footer>
+{% endblock content%}
+ 

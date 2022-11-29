@@ -1,0 +1,17 @@
+{% extends 'main/header.html' %}
+{% load static %}
+{% block content %}
+{% load crispy_forms_tags %}
+ <form method="POST">
+     <img class="mb-4" src="{% static 'assets/img/logo.png' %}" alt="" width="200" height="200">
+     {% csrf_token %}
+            {{ form|crispy }}
+     <button class="btn btn-primary" type="submit">Login</button>
+ </form>
+<hr>
+<p class="text-center">If you already have an account, <a href="{% url 'login' %}">login</a> instead.</p>
+<p class="text-center">Lost Password, <a href="{% url 'password_reset' %}">Reset</a></p>
+</form>
+
+{% endblock %}
+                            

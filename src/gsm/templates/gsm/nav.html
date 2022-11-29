@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
+    <div class="container px-5">
+        <a class="navbar-brand fw-bold" href="#page-top">Mobile Signal Strenght Tracker</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="bi-list"><a href="{% url 'login' %}" class="btn btn-sm primary">Home</a></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">                    
+                <li class="nav-item"><a href="{% url 'home' %}" class="btn btn-sm primary">Home</a></li>                
+                <li class="nav-item"><a href="{% url 'about' %}" class="btn btn-sm secondary">About</a></li>
+                <li class="nav-item"><a href="{% url 'faq' %}" class="btn btn-sm secondary">FAQs</a></li>
+                {% if user.is_authenticated %}
+                <li class="nav-item"><a href="{% url 'signal' %}" class="btn btn-sm primary">Search</a></li>   
+                {% endif %} 
+                <li class="nav-item"><a href="{% url 'contact' %}" class="btn btn-sm secondary">Contact</a></li>
+            </ul>
+            {% if user.is_authenticated %}
+            <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+                  
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        {{ user.username }}
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">                            
+                      <li><a class="dropdown-item" href="#">Change Password</a></li>
+                      <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+                    </ul>
+                  </div>
+
+
+                        
+            </ul>
+            {% else %}
+            <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">                    
+                <li class="nav-item"><a href="{% url 'login' %}" class="btn btn-sm primary">Login</a></li>
+                
+                <li class="nav-item"><a href="{% url 'register' %}" class="btn btn-sm secondary">Register</a></li>
+            </ul>
+            {% endif %}
+         
+        </div>
+    </div>
+</nav>
